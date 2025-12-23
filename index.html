@@ -5,38 +5,43 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Wedding Invitation</title>
 
-<!-- Google Fonts -->
-<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:wght@400;600&display=swap" rel="stylesheet">
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;400;500&family=Noto+Serif+Devanagari:wght@400;500&display=swap" rel="stylesheet">
 
 <style>
   body {
     margin: 0;
-    padding: 0;
-    background: #fafafa;
+    min-height: 100vh;
+    background:
+      radial-gradient(circle at top left, #fff1f2, transparent 40%),
+      radial-gradient(circle at bottom right, #fff7e6, transparent 40%),
+      linear-gradient(135deg, #fffaf0, #fdebd0);
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 100vh;
-    font-family: 'Playfair Display', serif;
-  }
-
-  #flipbook-container {
-    width: 100%;
-    max-width: 900px;
-    display: flex;
-    justify-content: center;
+    font-family: 'Poppins', sans-serif;
   }
 
   #flipbook {
     width: 90vw;
-    height: 65vh;
+    height: 70vh;
   }
 
   .page {
-    background: #fff;
-    padding: 18px;
+    background:
+      linear-gradient(rgba(255,255,255,0.92), rgba(255,255,255,0.92)),
+      repeating-radial-gradient(circle at top left, #f9d5d3 0 2px, transparent 2px 18px);
+    padding: 22px;
     box-sizing: border-box;
     text-align: center;
+    border-radius: 8px;
+  }
+
+  .cover {
+    background:
+      linear-gradient(rgba(184,50,39,0.88), rgba(184,50,39,0.88)),
+      repeating-radial-gradient(circle at top left, #f6c453 0 2px, transparent 2px 18px);
+    color: white;
   }
 
   h1, h2 {
@@ -45,78 +50,140 @@
   }
 
   h1 {
-    font-size: clamp(32px, 6vw, 48px);
+    font-size: clamp(36px, 6vw, 54px);
   }
 
   h2 {
-    font-size: clamp(26px, 5vw, 36px);
+    font-size: clamp(28px, 5vw, 40px);
+    color: #8b0000;
+  }
+
+  .cover h2 {
+    color: #fff;
   }
 
   p {
-    font-size: clamp(16px, 4vw, 18px);
+    font-size: 15px;
     line-height: 1.6;
   }
 
-  .details {
-    margin-top: 20px;
+  .hindi {
+    font-family: 'Noto Serif Devanagari', serif;
+    font-size: 15px;
+    margin-top: 6px;
   }
 
-  /* Mobile optimization */
-  @media (max-width: 600px) {
-    #flipbook {
-      height: 70vh;
-    }
+  .event-title {
+    font-weight: 500;
+    font-size: 18px;
+    margin-top: 18px;
+  }
+
+  .time {
+    font-size: 15px;
+    opacity: 0.9;
+  }
+
+  .divider {
+    margin: 16px auto;
+    width: 60%;
+    height: 1px;
+    background: #d4af37;
+  }
+
+  footer {
+    margin-top: 26px;
+    font-size: 14px;
+    opacity: 0.85;
   }
 </style>
 </head>
 
 <body>
 
-<div id="flipbook-container">
-  <div id="flipbook">
-    <div class="page" style="background:#fdecef;">
-      <h1>You’re Invited</h1>
-      <p>To the wedding celebration of</p>
-      <h2>Priya ❤️ Arjun</h2>
-      <p>14 February 2026</p>
-    </div>
+<div id="flipbook">
 
-    <div class="page" style="background:#e8f5e9;">
-      <h2>Wedding Details</h2>
-      <div class="details">
-        <p>📍 Rose Garden Hall</p>
-        <p>🕓 Ceremony: 4:00 PM</p>
-        <p>🎉 Reception: 7:00 PM</p>
-        <p>Please join us for dinner & celebration</p>
-      </div>
-    </div>
+  <!-- Cover -->
+  <div class="page cover">
+    <h1>Wedding Invitation</h1>
+    <p>Together with their families</p>
+    <p class="hindi">परिवार सहित</p>
 
-    <div class="page" style="background:#fffde7;">
-      <h2>With Love</h2>
-      <p>
-        Together with our families,<br />
-        we look forward to celebrating with you.
-      </p>
-      <p>💌 RSVP by 31 January</p>
-    </div>
+    <h2>Ayushi Singh ❤️ Kartikey Singh</h2>
+
+    <p>request the pleasure of your presence</p>
+    <p class="hindi">आपकी गरिमामयी उपस्थिति का सादर आमंत्रण</p>
+
+    <footer>18 – 19 February</footer>
   </div>
+
+  <!-- 18 Feb -->
+  <div class="page">
+    <h2>18th February</h2>
+    <p class="hindi">18 फ़रवरी</p>
+    <div class="divider"></div>
+
+    <div class="event-title">🌼 Haldi Ceremony</div>
+    <div class="time">11:00 AM onwards</div>
+    <div class="hindi">हल्दी समारोह – प्रातः 11 बजे से</div>
+
+    <div class="event-title">💍 Engagement</div>
+    <div class="time">8:00 PM onwards</div>
+    <div class="hindi">सगाई समारोह – रात्रि 8 बजे से</div>
+
+    <footer>Let the celebrations begin</footer>
+    <div class="hindi">खुशियों की शुरुआत</div>
+  </div>
+
+  <!-- 19 Feb -->
+  <div class="page">
+    <h2>19th February</h2>
+    <p class="hindi">19 फ़रवरी</p>
+    <div class="divider"></div>
+
+    <div class="event-title">🐎 Baraat</div>
+    <div class="time">2:00 PM onwards</div>
+    <div class="hindi">बारात – दोपहर 2 बजे से</div>
+
+    <div class="event-title">🔥 Wedding (Shadi)</div>
+    <div class="time">4:00 PM</div>
+    <div class="hindi">विवाह – सायं 4 बजे</div>
+
+    <div class="event-title">🎉 Reception</div>
+    <div class="time">8:00 PM onwards</div>
+    <div class="hindi">रिसेप्शन – रात्रि 8 बजे से</div>
+
+    <footer>Dinner & Celebration</footer>
+    <div class="hindi">भोज एवं उत्सव</div>
+  </div>
+
+  <!-- Closing -->
+  <div class="page">
+    <h2>With Love</h2>
+    <p>We look forward to celebrating with you</p>
+    <p class="hindi">आपके साथ इस शुभ अवसर को मनाने की प्रतीक्षा में</p>
+
+    <div class="divider"></div>
+
+    <p>✨ Blessings & Good Wishes ✨</p>
+    <p class="hindi">✨ आशीर्वाद एवं शुभकामनाएँ ✨</p>
+  </div>
+
 </div>
 
-<!-- jQuery -->
+<!-- Scripts -->
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-<!-- Turn.js -->
 <script src="turn.js"></script>
 
 <script>
   function initFlipbook() {
     const isMobile = window.innerWidth <= 768;
-
-    const width = isMobile ? window.innerWidth * 0.9 : 800;
-    const height = isMobile ? window.innerHeight * 0.65 : 500;
+    const width = isMobile ? window.innerWidth * 0.9 : 820;
+    const height = isMobile ? window.innerHeight * 0.7 : 520;
 
     $("#flipbook").turn({
-      width: width,
-      height: height,
+      width,
+      height,
       display: isMobile ? "single" : "double",
       autoCenter: true,
       gradients: true,
@@ -126,8 +193,7 @@
 
   $(document).ready(initFlipbook);
 
-  // Reinitialize on orientation change
-  window.addEventListener("resize", function () {
+  window.addEventListener("resize", () => {
     if ($("#flipbook").data("turn")) {
       $("#flipbook").turn("destroy");
     }
@@ -137,4 +203,3 @@
 
 </body>
 </html>
-
