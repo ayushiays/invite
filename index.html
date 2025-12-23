@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Wedding Invitation</title>
+
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:wght@400;600&display=swap" rel="stylesheet">
+
+<style>
+  body {
+    margin: 0;
+    padding: 0;
+    background: #fafafa;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    font-family: 'Playfair Display', serif;
+  }
+
+  #flipbook-container {
+    width: 100%;
+    max-width: 900px;
+    display: flex;
+    justify-content: center;
+  }
+
+  #flipbook {
+    width: 90vw;
+    height: 65vh;
+  }
+
+  .page {
+    background: #fff;
+    padding: 18px;
+    box-sizing: border-box;
+    text-align: center;
+  }
+
+  h1, h2 {
+    font-family: 'Great Vibes', cursive;
+    margin: 10px 0;
+  }
+
+  h1 {
+    font-size: clamp(32px, 6vw, 48px);
+  }
+
+  h2 {
+    font-size: clamp(26px, 5vw, 36px);
+  }
+
+  p {
+    font-size: clamp(16px, 4vw, 18px);
+    line-height: 1.6;
+  }
+
+  .details {
+    margin-top: 20px;
+  }
+
+  /* Mobile optimization */
+  @media (max-width: 600px) {
+    #flipbook {
+      height: 70vh;
+    }
+  }
+</style>
+</head>
+
+<body>
+
+<div id="flipbook-container">
+  <div id="flipbook">
+    <div class="page" style="background:#fdecef;">
+      <h1>You’re Invited</h1>
+      <p>To the wedding celebration of</p>
+      <h2>Priya ❤️ Arjun</h2>
+      <p>14 February 2026</p>
+    </div>
+
+    <div class="page" style="background:#e8f5e9;">
+      <h2>Wedding Details</h2>
+      <div class="details">
+        <p>📍 Rose Garden Hall</p>
+        <p>🕓 Ceremony: 4:00 PM</p>
+        <p>🎉 Reception: 7:00 PM</p>
+        <p>Please join us for dinner & celebration</p>
+      </div>
+    </div>
+
+    <div class="page" style="background:#fffde7;">
+      <h2>With Love</h2>
+      <p>
+        Together with our families,<br />
+        we look forward to celebrating with you.
+      </p>
+      <p>💌 RSVP by 31 January</p>
+    </div>
+  </div>
+</div>
+
+<!-- jQuery -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<!-- Turn.js -->
+<script src="turn.js"></script>
+
+<script>
+  function initFlipbook() {
+    const isMobile = window.innerWidth <= 768;
+
+    const width = isMobile ? window.innerWidth * 0.9 : 800;
+    const height = isMobile ? window.innerHeight * 0.65 : 500;
+
+    $("#flipbook").turn({
+      width: width,
+      height: height,
+      display: isMobile ? "single" : "double",
+      autoCenter: true,
+      gradients: true,
+      elevation: 50
+    });
+  }
+
+  $(document).ready(initFlipbook);
+
+  // Reinitialize on orientation change
+  window.addEventListener("resize", function () {
+    if ($("#flipbook").data("turn")) {
+      $("#flipbook").turn("destroy");
+    }
+    initFlipbook();
+  });
+</script>
+
+</body>
+</html>
+
