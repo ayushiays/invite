@@ -2,114 +2,93 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Wedding Invitation</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ayushi & Kartikey Wedding</title>
 
 <!-- Fonts -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@400;500&family=Noto+Serif+Devanagari:wght@400&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:wght@400;500;600&family=Noto+Serif+Devanagari:wght@400&display=swap" rel="stylesheet">
 
 <style>
   body {
     margin: 0;
-    background: #fff1f6;
+    background: #fff7f9;
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 100vh;
-    font-family: 'Poppins', sans-serif;
+    height: 100vh;
+    font-family: 'Playfair Display', serif;
   }
 
   #flipbook {
     width: 90vw;
-    height: 70vh;
+    height: 75vh;
   }
 
-  /* BASE PAGE */
   .page {
-    width: 100%;
-    height: 100%;
-    background: #ffffff;
-    padding: 22px;
-    box-sizing: border-box;
+    background: #fff;
+    padding: 24px;
     text-align: center;
-    border-radius: 6px;
-    box-shadow: inset -12px 0 18px rgba(0,0,0,0.06);
+    box-sizing: border-box;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+    position: relative;
   }
 
-  /* SOFT PINK WALLPAPER */
-  .pattern {
-    background:
-      linear-gradient(#ffffffee, #ffffffee),
-      repeating-linear-gradient(
-        45deg,
-        #f8cdda 0px,
-        #f8cdda 2px,
-        transparent 2px,
-        transparent 18px
-      );
+  /* Floral watercolour accents */
+  .floral-bg {
+    background-image: url('data:image/svg+xml;utf8,<svg width="600" height="600" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="%23fde7f0"/><stop offset="100%" stop-color="%23fceef4"/></linearGradient></defs><rect width="600" height="600" fill="url(%23grad)"/><circle cx="450" cy="100" r="120" fill="%23f8d6e1" fill-opacity="0.7"/><circle cx="100" cy="450" r="140" fill="%23f7c9d9" fill-opacity="0.7"/></svg>');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
   }
 
-  /* COVER */
-  .cover {
-    background:
-      linear-gradient(#e75480, #e75480),
-      repeating-linear-gradient(
-        45deg,
-        #f6b1c3 0px,
-        #f6b1c3 2px,
-        transparent 2px,
-        transparent 18px
-      );
-    color: #fff;
-  }
-
-  h1, h2 {
+  h1 {
     font-family: 'Great Vibes', cursive;
-    margin: 10px 0;
+    font-size: 48px;
+    margin: 12px 0;
+    color: #8b1c3f;
   }
 
-  h1 { font-size: clamp(36px, 6vw, 52px); }
-  h2 { font-size: clamp(28px, 5vw, 38px); color: #c2185b; }
-  .cover h2 { color: #fff; }
-
-  p {
-    font-size: 15px;
-    line-height: 1.6;
+  .sub {
+    font-size: 17px;
+    color: #555;
   }
 
   .hindi {
     font-family: 'Noto Serif Devanagari', serif;
-    font-size: 15px;
+    font-size: 16px;
+    color: #555;
+    margin-top: 6px;
   }
 
   .event-title {
-    font-size: 18px;
+    font-size: 19px;
     font-weight: 500;
     margin-top: 16px;
+    color: #9c1c4c;
+  }
+
+  .time {
+    font-size: 16px;
+    color: #444;
+    margin-bottom: 12px;
   }
 
   .divider {
     width: 60%;
     height: 1px;
-    background: #e91e63;
+    background: #e0a7c1;
     margin: 14px auto;
   }
 
-  /* FLIP HINT */
   .hint {
     position: absolute;
-    bottom: 12px;
+    bottom: 10px;
     right: 16px;
     font-size: 13px;
     opacity: 0.6;
-  }
-
-  @media (max-width: 768px) {
-    .page {
-      box-shadow: none;
-    }
   }
 </style>
 </head>
@@ -119,65 +98,54 @@
 <div id="flipbook">
 
   <!-- COVER -->
-  <div class="page cover">
-    <h1>Wedding Invitation</h1>
-    <p>Together with their families</p>
-    <p class="hindi">परिवार सहित</p>
-
-    <h2>Ayushi Singh & Kartikey Singh</h2>
-
-    <p>request the pleasure of your presence</p>
-    <p class="hindi">आपकी गरिमामयी उपस्थिति का सादर आमंत्रण</p>
-
+  <div class="page floral-bg">
+    <h1>Ayushi &amp; Kartikey</h1>
+    <div class="sub">Wedding Invitation</div>
+    <div class="sub hindi">शादी का आमंत्रण</div>
     <div class="hint">Swipe →</div>
   </div>
 
   <!-- 18 FEB -->
-  <div class="page pattern">
-    <h2>18th February</h2>
-    <p class="hindi">18 फ़रवरी</p>
+  <div class="page floral-bg">
+    <h1>18th February</h1>
+    <div class="hindi">18 फ़रवरी</div>
     <div class="divider"></div>
 
-    <div class="event-title">🌼 Haldi Ceremony</div>
-    <p>11:00 AM onwards</p>
-    <p class="hindi">हल्दी समारोह – प्रातः 11 बजे से</p>
+    <div class="event-title">Haldi Ceremony</div>
+    <div class="time">11:00 AM onwards</div>
+    <div class="hindi">हल्दी समारोह – 11:00 AM से</div>
 
-    <div class="event-title">💍 Engagement</div>
-    <p>8:00 PM onwards</p>
-    <p class="hindi">सगाई समारोह – रात्रि 8 बजे से</p>
+    <div class="event-title">Engagement</div>
+    <div class="time">8:00 PM onwards</div>
+    <div class="hindi">सगाई – 8:00 PM से</div>
 
     <div class="hint">Tap →</div>
   </div>
 
   <!-- 19 FEB -->
-  <div class="page pattern">
-    <h2>19th February</h2>
-    <p class="hindi">19 फ़रवरी</p>
+  <div class="page floral-bg">
+    <h1>19th February</h1>
+    <div class="hindi">19 फ़रवरी</div>
     <div class="divider"></div>
 
-    <div class="event-title">🐎 Baraat</div>
-    <p>2:00 PM onwards</p>
-    <p class="hindi">बारात – दोपहर 2 बजे से</p>
+    <div class="event-title">Baraat</div>
+    <div class="time">2:00 PM onwards</div>
+    <div class="hindi">बारात – 2:00 PM से</div>
 
-    <div class="event-title">🔥 Wedding</div>
-    <p>4:00 PM</p>
-    <p class="hindi">विवाह – सायं 4 बजे</p>
+    <div class="event-title">Wedding</div>
+    <div class="time">4:00 PM</div>
+    <div class="hindi">विवाह – 4:00 PM</div>
 
-    <div class="event-title">🎉 Reception</div>
-    <p>8:00 PM onwards</p>
-    <p class="hindi">रिसेप्शन – रात्रि 8 बजे से</p>
+    <div class="event-title">Reception</div>
+    <div class="time">8:00 PM onwards</div>
+    <div class="hindi">रिसेप्शन – 8:00 PM से</div>
   </div>
 
   <!-- END -->
-  <div class="page">
-    <h2>With Love</h2>
-    <p>We look forward to celebrating with you</p>
-    <p class="hindi">आपके साथ इस शुभ अवसर को मनाने की प्रतीक्षा में</p>
-
-    <div class="divider"></div>
-
-    <p>✨ Blessings & Good Wishes ✨</p>
-    <p class="hindi">✨ आशीर्वाद एवं शुभकामनाएँ ✨</p>
+  <div class="page floral-bg">
+    <h1>With Love</h1>
+    <div class="sub">We’re excited to celebrate with you</div>
+    <div class="hindi">आपके साथ इस शुभ अवसर को मनाने के लिए उत्साहित हैं</div>
   </div>
 
 </div>
@@ -189,12 +157,12 @@
   window.addEventListener("load", () => {
     const isMobile = window.innerWidth <= 768;
     $("#flipbook").turn({
-      width: isMobile ? window.innerWidth * 0.9 : 820,
-      height: isMobile ? window.innerHeight * 0.7 : 520,
+      width: isMobile ? window.innerWidth * 0.9 : 800,
+      height: isMobile ? window.innerHeight * 0.72 : 520,
       display: isMobile ? "single" : "double",
       autoCenter: true,
-      duration: 420,
-      elevation: 35,
+      duration: 380,
+      elevation: 40,
       gradients: false
     });
   });
